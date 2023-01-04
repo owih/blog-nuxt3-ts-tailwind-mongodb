@@ -1,6 +1,8 @@
 <template>
-  <div :class="{dark: darkMode}">
-    <NuxtPage />
+  <div :class="{dark: darkMode}" class="h-full">
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>
 <script setup lang="ts">
