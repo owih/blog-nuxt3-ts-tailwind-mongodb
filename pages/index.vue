@@ -1,5 +1,5 @@
 <template>
-  <div class="flex bg-teal-">
+  <div class="flex font-navigation">
     init
   </div>
 </template>

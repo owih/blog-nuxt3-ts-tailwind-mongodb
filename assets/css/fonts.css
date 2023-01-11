@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'Clinton';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Clinton'),
+  url('/assets/fonts/Clinton/Clinton-semibold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Clinton';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Clinton'),
+  url('/assets/fonts/Clinton/ClintonBold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Montreau';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Montreau'),
+  url('/assets/fonts/Montreau/Montreau-Regular.ttf') format('ttf'),
+  url('/assets/fonts/Montreau/Montreau-Regular.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Stopwatch';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Stopwatch'),
+  url('/assets/fonts/StopWatch/Stopwatch.otf') format('otf');
+}

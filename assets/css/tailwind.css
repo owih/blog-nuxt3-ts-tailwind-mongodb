@@ -1,3 +1,20 @@
+@import "fonts.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    font-size: 18px;
+  }
+}
+
+@layer components {
+  .title {
+    @apply font-title;
+  }
+  .container {
+    @apply px-2 mx-auto;
+  }
+}

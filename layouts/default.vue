@@ -4,11 +4,11 @@
       header
     </header>
     <div class="grow">
-      <slot />
+      <div class="container">
+        <slot />
+      </div>
     </div>
-    <footer>
-      footer
-    </footer>
+    <FooterVue />
   </div>
 </template>
 
