@@ -1,18 +1,17 @@
 <template>
   <div class="flex flex-col h-full">
-    <header>
-      header
-    </header>
+    <HeaderVue>
+      <HeaderVueNavigation :links="links" />
+    </HeaderVue>
     <div class="grow">
-      <div class="container">
-        <slot />
-      </div>
+      <slot />
     </div>
     <FooterVue />
   </div>
 </template>
 
 <script setup lang="ts">
+const links = useDefaultLinks
 </script>
 
 <style scoped>

@@ -5,16 +5,25 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    font-size: 18px;
-  }
 }
 
 @layer components {
-  .title {
-    @apply font-title;
+  body {
+    @apply text-sm lg:text-base;
+  }
+  h1, h2, h3, h4 {
+    @apply font-title font-bold;
+  }
+  h1 {
+    @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
   }
   .container {
     @apply px-2 mx-auto;
+  }
+  .link {
+    @apply transition-colors hover:text-primary hover:transition-colors
+  }
+  .link.router-link-active {
+    @apply text-primary font-bold
   }
 }

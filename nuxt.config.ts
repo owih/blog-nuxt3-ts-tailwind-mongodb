@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { resolve } from 'path'
+
 export default {
   head: {
     title: 'nuxt',
@@ -14,6 +16,11 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
+  },
+
+  router: {
+    linkActiveClass: 'link-active',
+    linkExactActiveClass: 'link-exact-active'
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -37,7 +44,8 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     'nuxt-icon',
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@pinia/nuxt'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

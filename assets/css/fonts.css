@@ -1,32 +1,41 @@
 @font-face {
-  font-family: 'Clinton';
+  font-family: 'Actay';
   font-style: normal;
   font-weight: normal;
-  src: local('Clinton'),
-  url('/assets/fonts/Clinton/Clinton-semibold.ttf') format('ttf');
+  src: local('Actay'),
+  url('/assets/fonts/Actay/Actay-Regular.ttf') format('truetype'),
+  url('/assets/fonts/Actay/Actay-Regular.otf') format('otf');
 }
 
 @font-face {
-  font-family: 'Clinton';
+  font-family: 'ActayBold';
   font-style: normal;
   font-weight: bold;
-  src: local('Clinton'),
-  url('/assets/fonts/Clinton/ClintonBold.ttf') format('ttf');
+  src: local('Actay'),
+  url('/assets/fonts/Actay/Actay-Bold.ttf') format('truetype'),
+  url('/assets/fonts/Actay/Actay-Bold.otf') format('otf');
 }
 
 @font-face {
-  font-family: 'Montreau';
+  font-family: 'Constance';
   font-style: normal;
   font-weight: normal;
-  src: local('Montreau'),
-  url('/assets/fonts/Montreau/Montreau-Regular.ttf') format('ttf'),
-  url('/assets/fonts/Montreau/Montreau-Regular.otf') format('otf');
+  src: local('Constance'),
+  url('/assets/fonts/Constance/Constance.otf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Stopwatch';
+  font-family: 'BebusNeue';
   font-style: normal;
   font-weight: normal;
-  src: local('Stopwatch'),
-  url('/assets/fonts/StopWatch/Stopwatch.otf') format('otf');
+  src: local('BebusNeue'),
+  url('/assets/fonts/BebusNeue/BebasNeue-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Manrope'),
+  url('/assets/fonts/Manrope/Manrope.ttf') format('truetype');
 }
