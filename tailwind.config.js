@@ -27,6 +27,10 @@ module.exports = {
         sans: ['Manrope', 'sans-serif'],
         title: ['Manrope', 'sans-serif'],
         navigation: ['BebusNeue', 'sans-serif']
+      },
+      zIndex: {
+        menu: '100',
+        burger: '110'
       }
     }
   },

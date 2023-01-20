@@ -5,6 +5,9 @@ module.exports = {
   rules: {
     'vue/attribute-hyphenation': ['off', {
       ignore: []
+    }],
+    'vue/v-on-event-hyphenation': ['off', {
+      ignore: []
     }]
   }
 }

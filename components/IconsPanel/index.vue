@@ -46,11 +46,40 @@ onMounted(useRandomStylesOnIcons)
 .root {
   display: block;
   position: relative;
-  max-height: 460px;
-  max-width: 460px;
+  max-height: 240px;
+  max-width: 240px;
   height: 100%;
   width: 100%;
 
+  &:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 0;
+    height: 0;
+    background-color: #FF3366;
+    border-radius: 100%;
+    opacity: 0.3;
+    transition: height 0.2s ease, width 0.2s ease;
+  }
+
+  @media (min-width: 768px) {
+    max-height: 320px;
+    max-width: 320px;
+  }
+  @media (min-width: 992px) {
+    max-height: 460px;
+    max-width: 460px;
+    &:hover {
+      &:before {
+        width: 160px;
+        height: 160px;
+      }
+    }
+  }
   @media (min-width: 1200px) {
     max-height: 600px;
     max-width: 600px;
@@ -58,14 +87,18 @@ onMounted(useRandomStylesOnIcons)
 
   .item {
     position: absolute;
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
     animation-name: animation;
     animation-duration: 6s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 
+    @media (min-width: 768px) {
+      width: 80px;
+      height: 80px;
+    }
     @media (min-width: 992px) {
       width: 100px;
       height: 100px;

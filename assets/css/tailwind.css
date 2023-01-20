@@ -9,21 +9,24 @@
 
 @layer components {
   body {
-    @apply text-sm lg:text-base;
+    @apply text-sm lg:text-base dark:bg-dark dark:text-light;
   }
   h1, h2, h3, h4 {
     @apply font-title font-bold;
   }
   h1 {
-    @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+    @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl lg:leading-tight xl:leading-tight;
   }
   .container {
     @apply px-2 mx-auto;
   }
   .link {
-    @apply transition-colors hover:text-primary hover:transition-colors
+    @apply transition-colors hover:lg:text-primary hover:transition-colors
   }
   .link.router-link-active {
     @apply text-primary font-bold
+  }
+  .section-title {
+    @apply font-navigation tracking-widest;
   }
 }

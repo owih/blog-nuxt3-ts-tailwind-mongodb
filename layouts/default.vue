@@ -1,8 +1,6 @@
 <template>
   <div class="flex flex-col h-full">
-    <HeaderVue>
-      <HeaderVueNavigation :links="links" />
-    </HeaderVue>
+    <HeaderVue />
     <div class="grow">
       <slot />
     </div>
@@ -11,7 +9,6 @@
 </template>
 
 <script setup lang="ts">
-const links = useDefaultLinks
 </script>
 
 <style scoped>

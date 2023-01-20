@@ -5,7 +5,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "prisma:generate": "dotenv -e .env -- npx prisma generate",
+    "prisma:migrate": "dotenv -e .env -- npx prisma migrate deploy --name prod"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.8",
@@ -20,7 +22,12 @@
     "sass-loader": "^10.4.1"
   },
   "dependencies": {
+    "@nuxtjs/color-mode": "^3.2.0",
     "@pinia/nuxt": "^0.4.6",
+    "@prisma/client": "^4.9.0",
     "pinia": "^2.0.29"
+  },
+  "prisma": {
+    "schema": "server/database/schema.prisma"
   }
 }

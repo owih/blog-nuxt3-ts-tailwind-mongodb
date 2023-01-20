@@ -45,8 +45,13 @@ export default {
   modules: [
     'nuxt-icon',
     '@nuxtjs/tailwindcss',
-    '@pinia/nuxt'
+    '@pinia/nuxt',
+    '@nuxtjs/color-mode'
   ],
+
+  colorMode: {
+    classSuffix: ''
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

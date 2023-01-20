@@ -1,4 +1,4 @@
 export const useTitleMessages: Array<string> = [
-  'Hello! I`m Dmitriy, Frontend developer',
-  'Привет! Меня зовут Дмитрий, я - Фронтенд разработчик'
+  'Hi! My name is Dmitry, I`m a frontend developer from Russia',
+  'Привет! Меня зовут Дмитрий, я - Фронтенд разработчик из России'
 ]

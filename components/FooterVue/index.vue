@@ -1,9 +1,9 @@
 <template>
   <footer class="py-4">
     <div class="container">
-      <div class="flex flex-col lg:flex-row justify-between">
-        <div class="pb-3 lg:pb-0">
-          <div>
+      <div class="flex flex-col md:flex-row justify-between">
+        <div class="pb-2 md:pb-0">
+          <div class="hidden md:block">
             Portfolio Website
           </div>
           <div>
@@ -11,7 +11,7 @@
           </div>
         </div>
         <div>
-          <div>
+          <div class="hidden md:block">
             Contact me
           </div>
           <div>
