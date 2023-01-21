@@ -21,7 +21,8 @@ module.exports = {
         primary: '#FF3366',
         secondary: '#5386E4',
         light: '#FFFAFF',
-        dark: '#090C08'
+        dark: '#090C08',
+        green: '#16a085'
       },
       fontFamily: {
         sans: ['Manrope', 'sans-serif'],

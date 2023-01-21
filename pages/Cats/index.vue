@@ -1,8 +1,13 @@
 <template>
   <div class="container">
-    <h1 class="section-title">
-      Cats?
-    </h1>
+    <div>
+      <h1 class="page-title inline-block mr-3">
+        Cats?
+      </h1>
+      <router-link :to="useDefaultLinks.home.url" class="link">
+        Home
+      </router-link>
+    </div>
   </div>
 </template>
 

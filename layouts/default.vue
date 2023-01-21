@@ -1,9 +1,9 @@
 <template>
   <div class="flex flex-col h-full">
     <HeaderVue />
-    <div class="grow">
+    <main class="grow pt-3 pb-8">
       <slot />
-    </div>
+    </main>
     <FooterVue />
   </div>
 </template>

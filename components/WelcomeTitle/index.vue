@@ -1,5 +1,5 @@
 <template>
-  <h1 ref="welcomeTitle">
+  <h1 ref="welcomeTitle" class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
     Hello! I`m Dmitriy, Frontend developer
   </h1>
 </template>

@@ -15,18 +15,24 @@
     @apply font-title font-bold;
   }
   h1 {
-    @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl lg:leading-tight xl:leading-tight;
+    @apply text-5xl lg:text-7xl lg:leading-tight xl:leading-tight mb-4 sm:mb-6 lg:mb-8;
+  }
+  h2 {
+    @apply text-4xl lg:text-5xl lg:leading-tight xl:leading-tight mb-3 sm:mb-4 lg:mb-6;
+  }
+  p {
+    @apply mb-2 last:mb-0;
   }
   .container {
-    @apply px-2 mx-auto;
+    @apply px-4 mx-auto;
   }
   .link {
-    @apply transition-colors hover:lg:text-primary hover:transition-colors
+    @apply hover:transition-colors hover:lg:text-primary hover:transition-colors text-secondary
   }
   .link.router-link-active {
     @apply text-primary font-bold
   }
-  .section-title {
-    @apply font-navigation tracking-widest;
+  .page-title {
+    @apply font-navigation font-normal tracking-widest;
   }
 }

@@ -80,7 +80,7 @@ onMounted(useRandomStylesOnIcons)
       }
     }
   }
-  @media (min-width: 1200px) {
+  @media (min-width: 1440px) {
     max-height: 600px;
     max-width: 600px;
   }
@@ -103,7 +103,7 @@ onMounted(useRandomStylesOnIcons)
       width: 100px;
       height: 100px;
     }
-    @media (min-width: 1200px) {
+    @media (min-width: 1440px) {
       width: 120px;
       height: 120px;
     }

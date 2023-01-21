@@ -1,8 +1,16 @@
 <template>
   <div class="container">
-    <h1 class="section-title">
-      Portfolio
-    </h1>
+    <div>
+      <h1 class="page-title inline-block mr-3">
+        Portfolio
+      </h1>
+      <router-link :to="useDefaultLinks.cats.url" class="link">
+        Cats?
+      </router-link>
+    </div>
+    <section>
+      <PortfolioPanelPreview />
+    </section>
   </div>
 </template>
 

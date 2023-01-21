@@ -1,6 +1,6 @@
-export default defineEventHandler((event) => {
-  console.log(event)
-  return {
-    api: 'works'
-  }
+import { getAllSkills } from '~/server/repositories/skillRepository'
+import Skill from '~/types/skill'
+
+export default defineEventHandler(() => {
+  return getAllSkills() as Promise<Skill[] | null>
 })
