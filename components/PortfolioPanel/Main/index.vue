@@ -26,7 +26,7 @@
           :key="item.tecnology.id"
           class="px-2 py-1 text-lg"
         >
-          <div class="px-3 py-1 rounded-lg bg:dark dark:bg-light text-light dark:text-dark">
+          <div class="px-3 py-1 rounded-lg bg-dark dark:bg-light text-light dark:text-dark">
             {{ item.tecnology.name }}
           </div>
         </div>

@@ -39,7 +39,7 @@ const linkWraps = reactive<HTMLUListElement[]>([])
 const setRandomTransition = ():void => {
   const isDesktop = window.matchMedia('(min-width:992px)').matches
   linkWraps.forEach((item, idx):void => {
-    item.style.transitionDuration = `${(isDesktop ? 0.4 : 0.2) + idx / 10 * 3}s`
+    item.style.transitionDuration = `${(isDesktop ? 0.3 : 0.2) + idx / 10 * 3}s`
   })
 }
 const onLinkClick = () => {
