@@ -3,8 +3,8 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url = "file:server/database/dev.db"
+  provider = "postgresql"
+  url = env("DATABASE_URL")
 }
 
 model Skill {
