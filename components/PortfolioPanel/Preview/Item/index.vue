@@ -1,8 +1,19 @@
 <template>
-  <div>
-    {{ props.preview }}
-    {{ props.technologies }}
-  </div>
+  <NuxtLink
+    :to="useDefaultLinks.portfolio.url + '/' + id"
+    class="w-full flex items-center h-full rounded-xl p-3 border-2 border-dark dark:border-light border-solid lg:hover:border-primary transition-colors relative"
+    :class="$style.root"
+  >
+    <img
+      :src="'/portfolio/' + preview"
+      :alt="preview.split('.')[0]"
+      class="w-full h-full rounded-lg"
+      :class="$style.image"
+    >
+    <div :class="$style.preview">
+      {{ title }}
+    </div>
+  </NuxtLink>
 </template>
 
 <script setup lang='ts'>
@@ -10,7 +21,15 @@ import { PropType } from 'vue'
 import Tecnology from '~/types/tecnology'
 
 const props = defineProps({
+  id: {
+    type: Number as PropType<number>,
+    required: true
+  },
   preview: {
+    type: String as PropType<string>,
+    required: true
+  },
+  title: {
     type: String as PropType<string>,
     required: true
   },
@@ -21,5 +40,34 @@ const props = defineProps({
 })
 </script>
 
-<style scoped>
+<style module lang="scss">
+.root {
+  .preview {
+    display: none;
+  }
+  @media (min-width: 992px) {
+    overflow: hidden;
+    .image {
+      transform: translateY(0);
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      position: relative;
+      z-index: 1;
+    }
+    .preview {
+      display: block;
+      position: absolute;
+      font-weight: bold;
+      top: 0;
+      @apply p-3 text-3xl;
+    }
+    &:hover {
+      .image {
+        transform: translateY(80px);
+      }
+      .preview {
+        transition: opacity 0.2s ease;
+      }
+    }
+  }
+}
 </style>

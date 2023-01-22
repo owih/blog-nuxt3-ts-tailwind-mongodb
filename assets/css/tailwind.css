@@ -18,10 +18,13 @@
     @apply text-5xl lg:text-7xl lg:leading-tight xl:leading-tight mb-4 sm:mb-6 lg:mb-8;
   }
   h2 {
-    @apply text-4xl lg:text-5xl lg:leading-tight xl:leading-tight mb-3 sm:mb-4 lg:mb-6;
+    @apply text-3xl lg:text-4xl lg:leading-tight xl:leading-tight mb-3 sm:mb-4 lg:mb-6;
   }
   p {
     @apply mb-2 last:mb-0;
+  }
+  .title-with-link {
+    @apply mb-4 sm:mb-6 lg:mb-8;
   }
   .container {
     @apply px-4 mx-auto;
@@ -34,5 +37,23 @@
   }
   .page-title {
     @apply font-navigation font-normal tracking-widest;
+  }
+  .form-item {
+    @apply mb-6 last:mb-0;
+  }
+  .input {
+    @apply text-dark border-2 border-dark text-lg w-full px-4 py-2 focus:outline-none focus:border-primary rounded-sm;
+  }
+  .textarea {
+    @apply text-dark border-2 border-dark text-lg w-full px-4 py-2 focus:outline-none focus:border-primary rounded-sm resize-none;
+  }
+  .button {
+    @apply py-2 px-8 bg-dark dark:bg-light border-2 border-dark dark:border-light transition-colors text-light dark:text-dark rounded-sm hover:lg:bg-transparent hover:lg:text-dark hover:lg:dark:text-light hover:lg:border-dark hover:lg:dark:border-light;
+  }
+  .button_disabled {
+    @apply opacity-70 bg-gray-500 border-gray-500 pointer-events-none;
+  }
+  .social-link {
+    @apply link flex items-center justify-center relative w-full h-full after:content-[''] after:absolute after:inset-0 after:bg-indigo-100 after:dark:bg-gray-700 after:-z-10 after:opacity-70 hover:lg:scale-105 hover:lg:transition-transform lg:transition-transform;
   }
 }

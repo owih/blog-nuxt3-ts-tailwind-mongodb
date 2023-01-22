@@ -1,24 +1,35 @@
 import { defineStore } from 'pinia'
 import Portfolio from '~/types/portfolio'
+import { getPortfolioListFromApi, getPortfolioPerIdFromApi } from '~/composables/usePortfolioApi'
 
 export const usePortfolioStore = defineStore('portfolio', () => {
-  const portfolio = ref<Portfolio[]>()
+  const portfolioList = ref<Portfolio[]>()
+  const portfolio = ref<Portfolio|null>()
 
-  const getPortfolio = computed(():Portfolio[] => portfolio.value as Portfolio[])
+  const getPortfolioList = computed(():Portfolio[] => portfolioList.value as Portfolio[])
+  const getPortfolioPerId = computed(():Portfolio => portfolio.value as Portfolio)
 
-  async function fetchPortfolioToStore () {
-    const { data } = await getPortfolioFromApi()
+  async function fetchPortfolioListToStore () {
+    const { data } = await getPortfolioListFromApi()
     const arrayData:Portfolio[] = []
 
     for (const item in data.value) {
       arrayData.push(data.value[item] as Portfolio)
     }
-    portfolio.value = arrayData
-    console.log(portfolio.value)
+    portfolioList.value = arrayData
+  }
+
+  async function fetchPortfolioPerIdToStore (id:number) {
+    const { data } = await getPortfolioPerIdFromApi(id)
+    if (data) {
+      portfolio.value = toRaw<Portfolio|null>(data.value)
+    }
   }
 
   return {
-    getPortfolio,
-    fetchPortfolioToStore
+    getPortfolioPerId,
+    getPortfolioList,
+    fetchPortfolioListToStore,
+    fetchPortfolioPerIdToStore
   }
 })

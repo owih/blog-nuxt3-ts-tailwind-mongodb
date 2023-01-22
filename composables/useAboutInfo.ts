@@ -1,6 +1,6 @@
 export default {
   about: {
-    title: 'About me',
+    title: 'General',
     text: ['I’m a 21-year-old frontend developer located in Russia Volgograd. I\'ve been doing frontend development for over a year and a half. Well-organized person with great attention to detail. Fan of TV series, basketball and gym activities. I like to solve interesting problems and learn very quickly. Ready for relocation'],
     image: '/about/avatar.JPG'
   },

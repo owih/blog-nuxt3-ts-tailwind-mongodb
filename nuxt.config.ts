@@ -17,6 +17,14 @@ export default {
     ]
   },
 
+  ssr: true,
+
+  loading: {
+    color: '#5386E4',
+    height: '2px',
+    throttle: 0
+  },
+
   router: {
     linkActiveClass: 'link-active',
     linkExactActiveClass: 'link-exact-active'

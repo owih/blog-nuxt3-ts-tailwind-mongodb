@@ -8,6 +8,7 @@
         <nuxt-link
           class="link text-3xl sm:text-4xl lg:text-7xl text-light px-2 py-3 block"
           :to="link.url"
+          @click="onLinkClick"
         >
           {{ link.title }}
         </nuxt-link>
@@ -18,6 +19,7 @@
 
 <script setup lang='ts'>
 import { PropType } from 'vue'
+import { useMenuStore } from '~/stores/useMenuStore'
 
 const props = defineProps({
   links: {
@@ -31,12 +33,17 @@ const props = defineProps({
   }
 })
 
+const menuState = useMenuStore()
 const linkWraps = reactive<HTMLUListElement[]>([])
 
 const setRandomTransition = ():void => {
+  const isDesktop = window.matchMedia('(min-width:992px)').matches
   linkWraps.forEach((item, idx):void => {
-    item.style.transitionDuration = `${0.4 + idx / 10 * 3}s`
+    item.style.transitionDuration = `${(isDesktop ? 0.4 : 0.2) + idx / 10 * 3}s`
   })
+}
+const onLinkClick = () => {
+  menuState.toggleOpen(false)
 }
 
 onMounted(setRandomTransition)
@@ -45,15 +52,13 @@ onMounted(setRandomTransition)
 <style module lang="scss">
 .root {
   .linkWrap {
-    opacity: 0;
     transform: translateX(-300%);
   }
   &.open {
     .linkWrap {
       transition-property: transform;
-      transition-delay: .2s;
+      transition-delay: .1s;
       transition-timing-function: ease;
-      opacity: 1;
       transform: translateX(0);
     }
   }

@@ -17,6 +17,10 @@ module.exports = {
       xl: '1440px'
     },
     extend: {
+      boxShadow: {
+        small: 'box-shadow: #5386E4 0px 10px 50px;',
+        middle: 'box-shadow: #5386E4 0px 18px 50px -10px;'
+      },
       colors: {
         primary: '#FF3366',
         secondary: '#5386E4',

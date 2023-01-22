@@ -6,7 +6,7 @@
       </HeaderVueMenu>
       <div class="flex space-x-6">
         <HeaderVueSwitchThemeButton :themeColor="stateTheme.getIsDark" @switchTheme="onSwitchTheme" />
-        <HeaderVueBurgerButton @changeMenu="onChangeMenu" />
+        <HeaderVueBurgerButton :isOpen="stateMenu.getIsOpen" @changeMenu="onChangeMenu" />
       </div>
     </div>
   </header>

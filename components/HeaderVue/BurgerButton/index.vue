@@ -3,6 +3,7 @@
     <input
       id="BURGER_MENU_TOGGLE"
       :class="$style.input"
+      :checked="props.isOpen"
       type="checkbox"
       @change="onChange"
     >
@@ -13,7 +14,16 @@
 </template>
 
 <script setup lang='ts'>
+import { PropType } from 'vue'
+
 const emits = defineEmits<{(e: 'changeMenu', value: boolean): void}>()
+const props = defineProps({
+  isOpen: {
+    type: Boolean as PropType<boolean>,
+    required: false,
+    default: false
+  }
+})
 const onChange = (event: Event):void => {
   const target = event.target as HTMLInputElement | null
   emits('changeMenu', !!target?.checked as boolean)

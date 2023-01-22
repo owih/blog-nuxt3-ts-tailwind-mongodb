@@ -15,6 +15,10 @@ export const useDefaultLinks: object = {
     title: 'Portfolio',
     url: '/portfolio'
   },
+  contact: {
+    title: 'Contact me',
+    url: '/contact'
+  },
   cats: {
     title: 'Cats?',
     url: '/cats'

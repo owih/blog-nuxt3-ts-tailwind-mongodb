@@ -1,11 +1,13 @@
 <template>
-  <div class="grid grid-cols-4 gap-6" :class="$style.root">
+  <div class="grid lg:grid-cols-3 xl:grid-cols-4 gap-6" :class="$style.root">
     <div
-      v-for="(item, idx) in getPortfolio"
+      v-for="(item, idx) in getPortfolioList"
       :key="item.id"
-      :class="[$style.item, {'row-start-1 row-end-4 col-start-3 col-end-5': idx === 2}]"
+      :class="[$style.item, {'xl:row-start-1 xl:row-end-3 xl:col-start-3 xl:col-end-5': idx === 2}]"
     >
       <PortfolioPanelPreviewItem
+        :id="item.id"
+        :title="item.title"
         :preview="item.preview"
         :technologies="item.tecnology"
       />
@@ -18,8 +20,8 @@ import { storeToRefs } from 'pinia'
 import { usePortfolioStore } from '~/stores/usePortfolioStore'
 
 const portfolioState = usePortfolioStore()
-portfolioState.fetchPortfolioToStore()
-const { getPortfolio } = storeToRefs(portfolioState)
+portfolioState.fetchPortfolioListToStore()
+const { getPortfolioList } = storeToRefs(portfolioState)
 </script>
 
 <style module lang="scss">

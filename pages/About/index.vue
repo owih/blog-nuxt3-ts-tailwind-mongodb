@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <div>
-      <h1 class="page-title inline-block mr-3">
-        About
+    <div class="title-with-link">
+      <h1 class="page-title inline-block mr-3 mb-0">
+        {{ useDefaultLinks.about.title }}
       </h1>
-      <router-link :to="useDefaultLinks.portfolio.url" class="link">
-        Portfolio
-      </router-link>
+      <NuxtLink :to="useDefaultLinks.portfolio.url" class="link">
+        {{ useDefaultLinks.portfolio.title }}
+      </NuxtLink>
     </div>
     <section class="mb-12">
       <AboutPanel :title="aboutData.about.title" :text="aboutData.about.text" :image="aboutData.about.image" />

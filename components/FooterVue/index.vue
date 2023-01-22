@@ -26,7 +26,7 @@
                 <a href="https://github.com/owih" class="link">Github</a>
               </li>
               <li>
-                <a href="tel:+79608700316" class="link">8(960)-870-0316</a>
+                <a href="tel:+79608700316" class="link">Phone</a>
               </li>
             </ul>
           </div>

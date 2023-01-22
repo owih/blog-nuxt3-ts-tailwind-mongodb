@@ -25,7 +25,8 @@
     "@nuxtjs/color-mode": "^3.2.0",
     "@pinia/nuxt": "^0.4.6",
     "@prisma/client": "^4.9.0",
-    "pinia": "^2.0.29"
+    "pinia": "^2.0.29",
+    "swiper": "^8.4.6"
   },
   "prisma": {
     "schema": "server/database/schema.prisma"
