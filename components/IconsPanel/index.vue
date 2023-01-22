@@ -25,13 +25,13 @@ const props = defineProps({
 })
 
 const links = useDefaultLinks
-const iconsRef = reactive<HTMLDivElement[]>([])
+const iconsRef = ref<HTMLDivElement[]>([])
 const animationTypes: Array<string> = ['linear', 'ease', 'ease-in', 'ease-in-out', 'ease-out']
 const minAnimationTime = 4
 const maxAnimationTime = 10
 
 const useRandomStylesOnIcons = ():void => {
-  iconsRef.forEach((item) => {
+  iconsRef.value.forEach((item) => {
     const randAnimationType = Math.floor(Math.random() * (animationTypes.length + 1))
     const randAnimationTime = Math.floor(Math.random() * (maxAnimationTime - minAnimationTime) + minAnimationTime)
     item.style.animationTimingFunction = animationTypes[randAnimationType]
