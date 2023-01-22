@@ -34,11 +34,11 @@ const props = defineProps({
 })
 
 const menuState = useMenuStore()
-const linkWraps = reactive<HTMLUListElement[]>([])
+const linkWraps = ref<HTMLUListElement[]>([])
 
 const setRandomTransition = ():void => {
   const isDesktop = window.matchMedia('(min-width:992px)').matches
-  linkWraps.forEach((item, idx):void => {
+  linkWraps.value.forEach((item, idx):void => {
     item.style.transitionDuration = `${(isDesktop ? 0.3 : 0.2) + idx / 10 * 3}s`
   })
 }
