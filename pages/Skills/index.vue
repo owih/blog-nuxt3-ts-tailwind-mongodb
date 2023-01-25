@@ -15,4 +15,7 @@
 </template>
 
 <script setup lang="ts">
+const { setSkillsToStore } = useSkillsStore()
+const skills = await getSkillsFromApi()
+setSkillsToStore(skills)
 </script>

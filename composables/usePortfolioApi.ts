@@ -1,8 +1,8 @@
 import Portfolio from '~/types/portfolio'
 
-export function getPortfolioListFromApi () {
-  return useFetch<Promise<Portfolio[]>>(usePathApi.portfolio)
+export async function getPortfolioListFromApi () {
+  return await useFetch<Portfolio[]>(usePathApi.portfolio)
 }
-export function getPortfolioPerIdFromApi (id:number) {
-  return useFetch<Portfolio|null>(usePathApi.portfolio + '/' + id)
+export async function getPortfolioPerIdFromApi (id:number) {
+  return await useFetch<Portfolio|null>(usePathApi.portfolio + '/' + id)
 }

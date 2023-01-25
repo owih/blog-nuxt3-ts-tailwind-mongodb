@@ -9,8 +9,8 @@
           {{ item }}
         </p>
       </div>
-      <div v-if="props.image" class="max-w-xs lg:ml-20">
-        <img :src="props.image" alt="avatar" class="w-full rounded-full">
+      <div v-if="props.image" class="w-full h-80 max-w-xs lg:ml-20">
+        <img :src="props.image" alt="avatar" class="w-full h-full rounded-full">
       </div>
     </div>
   </div>

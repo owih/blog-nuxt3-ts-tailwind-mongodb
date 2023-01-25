@@ -62,5 +62,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  publicRuntimeConfig: {
+    DATABASE_URL: process.env.DATABASE_URL
   }
 }

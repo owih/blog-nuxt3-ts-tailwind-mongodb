@@ -1,5 +1,5 @@
 import Skill from '~/types/skill'
 
-export function getSkillsFromApi () {
-  return useFetch<Promise<Skill[]>>(usePathApi.skills)
+export async function getSkillsFromApi () {
+  return await useFetch<Skill[]>(usePathApi.skills)
 }

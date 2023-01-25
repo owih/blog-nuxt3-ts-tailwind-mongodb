@@ -1,16 +1,14 @@
 <template>
   <div class="container">
     <section>
-      <PortfolioPanelMain :portfolioData="portfolioState.getPortfolioPerId" />
+      <PortfolioPanelMain :portfolioData="portfolioStore.getPortfolioPerId.value" />
     </section>
   </div>
 </template>
 
 <script setup lang="ts">
-import { usePortfolioStore } from '~/stores/usePortfolioStore'
-
 const route = useRoute()
-
-const portfolioState = usePortfolioStore()
-portfolioState.fetchPortfolioPerIdToStore(+route.params.id)
+const portfolioStore = usePortfolioStore()
+const portfolio = await getPortfolioPerIdFromApi(Number(route.params.id))
+portfolioStore.setPortfolioPerIdToStore(portfolio)
 </script>

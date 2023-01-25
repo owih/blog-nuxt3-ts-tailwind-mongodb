@@ -15,4 +15,7 @@
 </template>
 
 <script setup lang="ts">
+const { setPortfolioListToStore } = usePortfolioStore()
+const portfolioList = await getPortfolioListFromApi()
+setPortfolioListToStore(portfolioList)
 </script>

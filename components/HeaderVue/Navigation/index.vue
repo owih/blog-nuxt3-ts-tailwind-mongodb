@@ -19,7 +19,6 @@
 
 <script setup lang='ts'>
 import { PropType } from 'vue'
-import { useMenuStore } from '~/stores/useMenuStore'
 
 const props = defineProps({
   links: {

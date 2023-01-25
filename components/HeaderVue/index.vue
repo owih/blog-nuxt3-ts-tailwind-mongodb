@@ -1,20 +1,18 @@
 <template>
   <header class="py-6">
     <div class="container flex flex-row justify-end">
-      <HeaderVueMenu :isMenuOpen="stateMenu.getIsOpen">
-        <HeaderVueNavigation :links="links" :isMenuOpen="stateMenu.getIsOpen" />
+      <HeaderVueMenu :isMenuOpen="stateMenu.getIsOpen.value">
+        <HeaderVueNavigation :links="links" :isMenuOpen="stateMenu.getIsOpen.value" />
       </HeaderVueMenu>
       <div class="flex space-x-6">
-        <HeaderVueSwitchThemeButton :themeColor="stateTheme.getIsDark" @switchTheme="onSwitchTheme" />
-        <HeaderVueBurgerButton :isOpen="stateMenu.getIsOpen" @changeMenu="onChangeMenu" />
+        <HeaderVueSwitchThemeButton :themeColor="stateTheme.getIsDark.value" @switchTheme="onSwitchTheme" />
+        <HeaderVueBurgerButton :isOpen="stateMenu.getIsOpen.value" @changeMenu="onChangeMenu" />
       </div>
     </div>
   </header>
 </template>
 
 <script setup lang='ts'>
-import { useMenuStore } from '~/stores/useMenuStore'
-import { useColorThemeStore } from '~/stores/useColorThemeStore'
 
 const stateMenu = useMenuStore()
 const stateTheme = useColorThemeStore()

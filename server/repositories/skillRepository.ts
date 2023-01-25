@@ -1,11 +1,15 @@
 import { Skill } from '@prisma/client'
 import prisma from '@/server/database/skills'
 
-export async function getAllSkills (): Promise<Skill[] | null> {
-  const data = await prisma.skill.findMany({
-    include: {
-      subskills: true
-    }
-  })
-  return data
+export function getAllSkills (): Promise<Skill[] | null> {
+  try {
+    const data = prisma.skill.findMany({
+      include: {
+        subskills: true
+      }
+    })
+    return data
+  } catch (e) {
+    throw createError({ statusCode: 500, statusMessage: 'Data fetch error' })
+  }
 }
