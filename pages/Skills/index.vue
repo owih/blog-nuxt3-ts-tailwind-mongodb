@@ -15,6 +15,12 @@
 </template>
 
 <script setup lang="ts">
+useHead({
+  title: useDefaultLinks.skills.pageTitle,
+  meta: [
+    { name: 'description', content: useDefaultLinks.skills.description }
+  ]
+})
 const { setSkillsToStore } = useSkillsStore()
 const skills = await getSkillsFromApi()
 setSkillsToStore(skills)

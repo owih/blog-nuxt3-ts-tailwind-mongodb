@@ -6,8 +6,12 @@ export default defineEventHandler(async (event) => {
   if ((!body.name || body.name.length < 3) || (!body.email || body.email.length < 5)) {
     throw createError({
       statusCode: 400,
-      statusMessage: 'Wrong form data'
+      statusMessage: 'Wrong data format'
     })
   }
-  return await postFeedback(body) as Feedback | null
+  try {
+    return await postFeedback(body) as Feedback | null
+  } catch (e) {
+    throw (createError({ statusCode: 404, statusMessage: 'Data fetch error' }))
+  }
 })

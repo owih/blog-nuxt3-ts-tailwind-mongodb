@@ -1,6 +1,8 @@
 <template>
   <h1 ref="welcomeTitle" class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
-    Hello! I`m Dmitriy, Frontend developer
+    <span class="opacity-0">
+      Hello! I`m Dmitriy, Frontend developer
+    </span>
   </h1>
 </template>
 

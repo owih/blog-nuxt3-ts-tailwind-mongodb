@@ -56,7 +56,7 @@
       <img
         :src="portfolioData.gif"
         :alt="portfolioData.gif.split('.')[0]"
-        class="shadow-2xl shadow-secondary rounded-md m-auto"
+        class="shadow-xl shadow-secondary rounded-md m-auto"
       >
     </div>
   </div>

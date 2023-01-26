@@ -1,5 +1,5 @@
 <template>
-  <div :class="[$style.root, {[$style.open]: isMenuOpen}]">
+  <div :class="[$style.root, {[$style.open]: props.isMenuOpen}]">
     <slot />
   </div>
 </template>
@@ -25,6 +25,7 @@ const props = defineProps({
   opacity: 0;
   transition: opacity 0.2s ease;
   pointer-events: none;
+  z-index: 100;
   @apply bg-dark;
   &.open {
     pointer-events: auto;

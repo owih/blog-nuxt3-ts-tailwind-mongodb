@@ -18,8 +18,10 @@ module.exports = {
     },
     extend: {
       boxShadow: {
-        small: 'box-shadow: #5386E4 0px 10px 50px;',
-        middle: 'box-shadow: #5386E4 0px 18px 50px -10px;'
+        thinLight: '0px 1px 4px rgba(255, 255, 255, 0.8)',
+        thinDark: '0px 1px 4px rgba(0, 0, 0, 0.16)',
+        dark: '0px 5px 15px rgba(0, 0, 0, 0.35)',
+        light: '0px 5px 15px rgba(255, 255, 255, 0.55)'
       },
       colors: {
         primary: '#FF3366',

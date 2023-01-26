@@ -9,10 +9,18 @@
       </NuxtLink>
     </div>
     <section>
-      <CatsSwiper />
+      <div class="max-h-96 relative">
+        <CatsSwiper />
+      </div>
     </section>
   </div>
 </template>
 
 <script setup lang="ts">
+useHead({
+  title: useDefaultLinks.cats.pageTitle,
+  meta: [
+    { name: 'description', content: useDefaultLinks.cats.description }
+  ]
+})
 </script>

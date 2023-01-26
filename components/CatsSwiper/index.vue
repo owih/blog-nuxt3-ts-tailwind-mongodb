@@ -1,25 +1,31 @@
 <template>
-  <Swiper
-    class="h-full"
-    :class="$style.root"
-    navigation
-    pagination
-    :space-between="30"
-    :modules="[Navigation, Pagination]"
-    :breakpoints="{
-      992: {
-        'slidesPerView': 3,
-        'spaceBetween': 70,
-        effect: 'cards'
-      }
-    }"
-  >
-    <SwiperSlide v-for="(item, idx) in useCatsList" :key="idx">
-      <div class="w-full h-full">
-        <img :src="'/cats/' + item" :alt="item" class="rounded-md">
-      </div>
-    </SwiperSlide>
-  </Swiper>
+  <div class="absolute inset-0 flex items-center justify-center">
+    <Icon name="line-md:loading-twotone-loop" size="80" />
+  </div>
+  <div :class="{ 'opacity-0': !isInit }">
+    <Swiper
+      class="h-full"
+      :class="$style.root"
+      navigation
+      pagination
+      :space-between="30"
+      :modules="[Navigation, Pagination]"
+      :breakpoints="{
+        992: {
+          'slidesPerView': 3,
+          'spaceBetween': 70,
+          effect: 'cards'
+        }
+      }"
+      @init="isInit = true"
+    >
+      <SwiperSlide v-for="(item, idx) in useCatsList" :key="idx" class="max-h-96 max-w-sm">
+        <div class="w-full h-full">
+          <img :src="'/cats/' + item" :alt="item" class="rounded-md">
+        </div>
+      </SwiperSlide>
+    </Swiper>
+  </div>
 </template>
 
 <script setup lang='ts'>
@@ -29,6 +35,8 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import useCatsList from '~/composables/useCatsList'
+
+const isInit = ref<boolean>(false)
 </script>
 
 <style module lang="scss">

@@ -1,10 +1,10 @@
 <template>
-  <div :class="{dark: darkMode}" class="h-full">
+  <div class="h-full wrapper">
     <NuxtLayout>
+      <NuxtLoadingIndicator :throttle="20" :height="6" />
       <NuxtPage />
     </NuxtLayout>
   </div>
 </template>
 <script setup lang="ts">
-const darkMode = ref(false)
 </script>

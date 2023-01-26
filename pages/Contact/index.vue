@@ -11,9 +11,6 @@
     <section>
       <div class="flex flex-col lg:flex-row">
         <div class="lg:w-6/12 mb-12 lg:mb-0">
-          <div class="mb-6 text-xl">
-            You can leave me a message that I will read soon and be able to reply.
-          </div>
           <div>
             <ContactPanel />
           </div>
@@ -27,4 +24,10 @@
 </template>
 
 <script setup lang="ts">
+useHead({
+  title: useDefaultLinks.contact.pageTitle,
+  meta: [
+    { name: 'description', content: useDefaultLinks.contact.description }
+  ]
+})
 </script>

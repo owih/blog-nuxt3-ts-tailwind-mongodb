@@ -15,6 +15,13 @@
 </template>
 
 <script setup lang="ts">
+useHead({
+  title: useDefaultLinks.portfolio.pageTitle,
+  meta: [
+    { name: 'description', content: useDefaultLinks.portfolio.description }
+  ]
+})
+
 const { setPortfolioListToStore } = usePortfolioStore()
 const portfolioList = await getPortfolioListFromApi()
 setPortfolioListToStore(portfolioList)
