@@ -2,13 +2,12 @@
   <div>
     <div
       v-if="getSkills.length"
-      class="grid md:grid-cols-3 lg:grid-cols-4 gap-y-10 gap-x-6"
+      class="grid md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-y-10 gap-x-6"
     >
       <div
         v-for="skill in getSkills"
         :key="skill.id"
       >
-        {{ skill }}
         <SkillsPanelItem :skill="skill" />
       </div>
     </div>

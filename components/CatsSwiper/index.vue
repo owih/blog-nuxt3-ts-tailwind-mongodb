@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute inset-0 flex items-center justify-center">
+  <div class="absolute inset-0 flex items-center justify-center" :class="{ 'opacity-0': isInit }">
     <Icon name="line-md:loading-twotone-loop" size="80" />
   </div>
   <div :class="{ 'opacity-0': !isInit }">
@@ -19,7 +19,7 @@
       }"
       @init="isInit = true"
     >
-      <SwiperSlide v-for="(item, idx) in useCatsList" :key="idx" class="max-h-96 max-w-sm">
+      <SwiperSlide v-for="(item, idx) in useCatsList" :key="idx" class="lg:max-h-96 lg:max-w-sm">
         <div class="w-full h-full">
           <img :src="'/cats/' + item" :alt="item" class="rounded-md">
         </div>

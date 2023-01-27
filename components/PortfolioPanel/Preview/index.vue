@@ -7,9 +7,7 @@
     >
       <PortfolioPanelPreviewItem
         :id="item.id"
-        :title="item.title"
         :preview="item.preview"
-        :technologies="item.tecnology"
       />
     </div>
   </div>

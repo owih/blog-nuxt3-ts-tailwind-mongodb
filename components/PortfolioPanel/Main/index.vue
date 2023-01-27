@@ -54,7 +54,7 @@
         Preview:
       </div>
       <img
-        :src="portfolioData.gif"
+        :src="`/works/${portfolioData.gif}`"
         :alt="portfolioData.gif.split('.')[0]"
         class="shadow-xl shadow-secondary rounded-md m-auto"
       >
