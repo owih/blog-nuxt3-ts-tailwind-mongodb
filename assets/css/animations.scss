@@ -1,15 +1,8 @@
-.page-leave-active {
-  transition: all 0.3s;
-}
-.page-leave-to {
-  opacity: 0;
-}
-
 .animation {
   opacity: 0;
-  transition: opacity 3s ease;
+  transition: all 4s ease;
   &_jumpy {
-    animation: show-jumpy 0.6s ease;
+    animation: show-jumpy 1s ease;
     opacity: 1;
   }
   &_show {
@@ -17,7 +10,19 @@
     opacity: 1;
   }
   &_line-up {
-    animation: 1s line-up-animation ease-out;
+    animation: 0.4s line-up-animation ease-out;
+    transform-style: flat;
+    opacity: 1;
+  }
+}
+
+.page-leave-active {
+  transition: all 0.4s;
+}
+.page-leave-to {
+  opacity: 0;
+  .animation_line-up {
+    animation: 0.4s line-down-animation ease-out;
     opacity: 1;
   }
 }
@@ -34,20 +39,25 @@
 @keyframes line-up-animation {
   0% {
     opacity: 0;
-    transform: translateY(80%);
-  }
-  20% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(0%);
+    transform: translateY(60%);
   }
   100% {
     opacity: 1;
     transform: translateY(0%);
   }
 }
+
+@keyframes line-down-animation {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-60%);
+  }
+}
+
 
 @keyframes show-jumpy {
   0% {
