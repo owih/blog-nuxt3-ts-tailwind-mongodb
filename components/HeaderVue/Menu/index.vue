@@ -26,6 +26,8 @@ const props = defineProps({
   transition: opacity 0.2s ease;
   pointer-events: none;
   z-index: 100;
+  overflow: auto;
+  padding: 24px 0;
   @apply bg-dark;
   &.open {
     pointer-events: auto;

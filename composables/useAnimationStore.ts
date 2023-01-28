@@ -21,7 +21,6 @@ export default () => {
   function setAnimation (animation: PageAnimationName):void {
     useAnimations.value[animation] = true
     useAnimations.value.anyone = true
-    console.log(useAnimations.value)
   }
 
   return {

@@ -17,13 +17,13 @@
           <div>
             <ul class="flex flex-row space-x-3">
               <li>
-                <a href="https://t.me/qekex" class="link">Telegram</a>
+                <a href="https://t.me/owihh" target="_blank" class="link">Telegram</a>
               </li>
               <li>
                 <a href="mailto:golovatenko.dmitry@mail.ru" class="link">Mail</a>
               </li>
               <li>
-                <a href="https://github.com/owih" class="link">Github</a>
+                <a href="https://github.com/owih" target="_blank" class="link">Github</a>
               </li>
               <li>
                 <a href="tel:+79608700316" class="link">Phone</a>
