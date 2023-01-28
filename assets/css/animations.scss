@@ -1,0 +1,61 @@
+.page-leave-active {
+  transition: all 0.3s;
+}
+.page-leave-to {
+  opacity: 0;
+}
+
+.animation {
+  opacity: 0;
+  transition: opacity 3s ease;
+  &_jumpy {
+    animation: show-jumpy 0.6s ease;
+    opacity: 1;
+  }
+  &_show {
+    animation: 1s show-animation ease-out;
+    opacity: 1;
+  }
+  &_line-up {
+    animation: 1s line-up-animation ease-out;
+    opacity: 1;
+  }
+}
+
+@keyframes show-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes line-up-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes show-jumpy {
+  0% {
+    transform: scale(0);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -15,9 +15,9 @@ export default {
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-      ],
-      pageTransition: true
-    }
+      ]
+    },
+    pageTransition: { name: 'page', mode: 'out-in' }
   },
 
   ssr: true,

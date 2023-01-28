@@ -6,14 +6,12 @@
       </HeaderVueMenu>
       <div class="flex space-x-6">
         <HeaderVueSwitchThemeButton
-          class="animation"
-          :class="{ 'animation_jumpy': stateAnimation.getAnimations.value.anyone }"
+          class="animation animation_jumpy"
           :themeColor="stateTheme.getIsDark.value"
           @switchTheme="onSwitchTheme"
         />
         <HeaderVueBurgerButton
-          class="animation"
-          :class="{ 'animation_jumpy': stateAnimation.getAnimations.value.anyone }"
+          class="animation animation_jumpy"
           :isOpen="stateMenu.getIsOpen.value"
           @changeMenu="onChangeMenu"
         />
@@ -26,7 +24,6 @@
 
 const stateMenu = useMenuStore()
 const stateTheme = useColorThemeStore()
-const stateAnimation = useAnimationStore()
 
 const links = useDefaultLinks
 const onSwitchTheme = ():void => {

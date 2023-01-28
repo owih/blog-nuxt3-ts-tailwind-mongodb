@@ -1,9 +1,6 @@
 <template>
   <div class="container">
-    <div
-      class="title-with-link animation"
-      :class="{ 'animation_line-up': animationStore.getAnimations.value.skill }"
-    >
+    <div class="title-with-link animation animation_line-up">
       <h1 class="page-title inline-block mr-3 mb-0">
         {{ useDefaultLinks.skills.title }}
       </h1>
@@ -12,10 +9,7 @@
       </NuxtLink>
     </div>
     <section>
-      <div
-        class="xl:pt-20 animation"
-        :class="{ 'animation_show': animationStore.getAnimations.value.skill }"
-      >
+      <div class="xl:pt-20 animation animation_show">
         <SkillsPanel />
       </div>
     </section>
@@ -31,10 +25,5 @@ useHead({
 })
 const { setSkillsToStore } = useSkillsStore()
 const skills = await getSkillsFromApi()
-const animationStore = useAnimationStore()
-
-onMounted(() => {
-  animationStore.setAnimation('skill')
-})
 setSkillsToStore(skills)
 </script>

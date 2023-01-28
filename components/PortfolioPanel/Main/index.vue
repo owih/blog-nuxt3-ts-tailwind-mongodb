@@ -1,9 +1,6 @@
 <template>
   <div v-if="portfolioData && Object.keys(portfolioData).length">
-    <div
-      class="title-with-link animation"
-      :class="{ 'animation_line-up': animationStore.getAnimations.value.portfolioId }"
-    >
+    <div class="title-with-link animation animation_line-up">
       <h1 class="page-title inline-block mr-3 mb-0">
         {{ portfolioData.title }}
       </h1>
@@ -11,10 +8,7 @@
         Back to portfolio
       </NuxtLink>
     </div>
-    <div
-      class="animation"
-      :class="{ 'animation_show': animationStore.getAnimations.value.portfolioId }"
-    >
+    <div class="animation animation_show">
       <div class="mb-10 text-lg">
         <div class="mb-4 text-3xl">
           Info:
@@ -80,7 +74,6 @@ const props = defineProps({
     required: true
   }
 })
-const animationStore = useAnimationStore()
 </script>
 
 <style scoped>

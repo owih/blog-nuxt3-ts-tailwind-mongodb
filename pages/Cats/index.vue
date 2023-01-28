@@ -1,9 +1,6 @@
 <template>
   <div class="container">
-    <div
-      class="title-with-link animation"
-      :class="{ 'animation_line-up': animationStore.getAnimations.value.cats }"
-    >
+    <div class="title-with-link animation animation_line-up">
       <h1 class="page-title inline-block mr-3 mb-0">
         {{ useDefaultLinks.cats.title }}
       </h1>
@@ -25,10 +22,5 @@ useHead({
   meta: [
     { name: 'description', content: useDefaultLinks.cats.description }
   ]
-})
-const animationStore = useAnimationStore()
-
-onMounted(() => {
-  animationStore.setAnimation('cats')
 })
 </script>

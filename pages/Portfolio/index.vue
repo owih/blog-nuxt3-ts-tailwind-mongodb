@@ -1,9 +1,6 @@
 <template>
   <div class="container">
-    <div
-      class="title-with-link animation"
-      :class="{ 'animation_line-up': animationStore.getAnimations.value.portfolio }"
-    >
+    <div class="title-with-link animation animation_line-up">
       <h1 class="page-title inline-block mr-3 mb-0">
         {{ useDefaultLinks.portfolio.title }}
       </h1>
@@ -11,10 +8,7 @@
         {{ useDefaultLinks.contact.title }}
       </NuxtLink>
     </div>
-    <section
-      class="animation"
-      :class="{ 'animation_show': animationStore.getAnimations.value.portfolio }"
-    >
+    <section class="animation animation_show">
       <PortfolioPanelPreview />
     </section>
   </div>
@@ -31,10 +25,4 @@ useHead({
 const { setPortfolioListToStore } = usePortfolioStore()
 const portfolioList = await getPortfolioListFromApi()
 setPortfolioListToStore(portfolioList)
-
-const animationStore = useAnimationStore()
-
-onMounted(() => {
-  animationStore.setAnimation('portfolio')
-})
 </script>
