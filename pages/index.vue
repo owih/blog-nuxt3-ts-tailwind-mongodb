@@ -14,4 +14,9 @@
 <script setup lang="ts">
 const titleMessages = useTitleMessages
 const icons = useHomeIconsPanel
+const { setAnimation } = useAnimationStore()
+
+onMounted(() => {
+  setAnimation('home')
+})
 </script>

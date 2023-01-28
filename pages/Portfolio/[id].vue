@@ -11,4 +11,10 @@ const route = useRoute()
 const portfolioStore = usePortfolioStore()
 const portfolio = await getPortfolioPerIdFromApi(Number(route.params.id))
 portfolioStore.setPortfolioPerIdToStore(portfolio)
+
+const animationStore = useAnimationStore()
+
+onMounted(() => {
+  animationStore.setAnimation('portfolioId')
+})
 </script>

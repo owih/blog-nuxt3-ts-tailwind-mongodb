@@ -2,7 +2,7 @@
   <div class="absolute inset-0 flex items-center justify-center" :class="{ 'opacity-0': isInit }">
     <Icon name="line-md:loading-twotone-loop" size="80" />
   </div>
-  <div :class="{ 'opacity-0': !isInit }">
+  <div class="transition-opacity" :class="isInit ? 'opacity-1' : 'opacity-0'">
     <Swiper
       class="h-full"
       :class="$style.root"

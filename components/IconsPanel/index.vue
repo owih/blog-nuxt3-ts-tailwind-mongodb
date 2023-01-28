@@ -1,6 +1,7 @@
 <template>
   <nuxt-link
-    :class="$style.root"
+    class="animation"
+    :class="[$style.root, { 'animation_show': animationStore.getAnimations.value.home }]"
     :to="links.skills.url"
   >
     <div
@@ -24,6 +25,7 @@ const props = defineProps({
   }
 })
 
+const animationStore = useAnimationStore()
 const links = useDefaultLinks
 const iconsRef = ref<HTMLDivElement[]>([])
 const animationTypes: Array<string> = ['linear', 'ease', 'ease-in', 'ease-in-out', 'ease-out']

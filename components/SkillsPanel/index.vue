@@ -7,6 +7,7 @@
       <div
         v-for="skill in getSkills"
         :key="skill.id"
+        class="lg:justify-self-center"
       >
         <SkillsPanelItem :skill="skill" />
       </div>

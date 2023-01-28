@@ -32,3 +32,48 @@ body {
 #__nuxt {
   height: 100%;
 }
+
+.animation {
+  opacity: 0;
+  transition: opacity 2s ease;
+  &_jumpy {
+    animation: showJumpy 0.6s ease;
+    opacity: 1;
+  }
+  &_show {
+    opacity: 1;
+  }
+  &_line-up {
+    animation: 2s line-up-animation ease-out;
+    opacity: 1;
+  }
+}
+
+@keyframes line-up-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes showJumpy {
+  0% {
+    transform: scale(0);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
