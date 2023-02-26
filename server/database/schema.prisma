@@ -1,59 +1,59 @@
 generator client {
-  provider = "prisma-client-js"
+  provider      = "prisma-client-js"
   binaryTargets = ["native"]
 }
 
 datasource db {
   provider = "postgresql"
-  url = "postgres://postgres:owih-portfolio-website@db.iaudpbjkscxwfzsfpxim.supabase.co:6543/postgres"
+  url      = env("DATABASE_URL")
 }
 
 model Skill {
-  id               Int            @id @unique @default(autoincrement())
-  name             String         @unique
-  subskills        Subskill[]
+  id        Int        @id @unique @default(autoincrement())
+  name      String     @unique
+  subskills Subskill[]
 }
 
 model Subskill {
-  id          Int      @id @unique @default(autoincrement())
-  skill       Skill    @relation(fields: [skillId], references: [id])
-  skillId     Int
-  basic       Boolean  @default(false)
-  pinned      Boolean? @default(false)
-  name        String @unique
+  id      Int      @id @unique @default(autoincrement())
+  skill   Skill    @relation(fields: [skillId], references: [id])
+  skillId Int
+  basic   Boolean  @default(false)
+  pinned  Boolean? @default(false)
+  name    String   @unique
 }
 
 model Portfolio {
-  id          Int      @id @unique @default(autoincrement())
-  title       String @unique
-  info        String?
-  tecnologys  PortfolioOnTecnologies[]
-  preview     String
-  gif         String
-  linkWeb     String?
-  linkGit     String?
+  id         Int                      @id @unique @default(autoincrement())
+  title      String                   @unique
+  info       String?
+  tecnologys PortfolioOnTecnologies[]
+  preview    String
+  gif        String
+  linkWeb    String?
+  linkGit    String?
 }
 
 model Tecnology {
-  id              Int          @id @unique @default(autoincrement())
-  name            String @unique
-  portfolio       PortfolioOnTecnologies[]
+  id        Int                      @id @unique @default(autoincrement())
+  name      String                   @unique
+  portfolio PortfolioOnTecnologies[]
 }
 
 model PortfolioOnTecnologies {
-  portfolio       Portfolio     @relation(fields: [portfolioId], references: [id])
-  portfolioId     Int
+  portfolio   Portfolio @relation(fields: [portfolioId], references: [id])
+  portfolioId Int
   tecnology   Tecnology @relation(fields: [tecnologyId], references: [id])
   tecnologyId Int
-  assignedAt DateTime @default(now())
-  assignedBy String
+  assignedAt  DateTime  @default(now())
+  assignedBy  String
 
   @@id([portfolioId, tecnologyId])
 }
 
 model Feedback {
-  id               Int            @id @unique @default(autoincrement())
-  name             String
-  email            String
-  message          String?
+  id      Int     @id @unique @default(autoincrement())
+  name    String
+  email   String
+  message String?
 }
