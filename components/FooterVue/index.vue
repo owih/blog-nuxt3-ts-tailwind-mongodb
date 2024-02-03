@@ -26,6 +26,12 @@
                 <a href="https://github.com/owih" target="_blank" class="link">Github</a>
               </li>
               <li>
+                <a href="https://golovatenko-resume.vercel.app/" target="_blank" class="link">Resume</a>
+              </li>
+              <li>
+                <a href="/resume/golovatenko-resume.pdf" download class="link">Resume PDF</a>
+              </li>
+              <li>
                 <a href="tel:+79608700316" class="link">Phone</a>
               </li>
             </ul>

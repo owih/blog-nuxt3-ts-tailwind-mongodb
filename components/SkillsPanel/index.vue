@@ -1,11 +1,11 @@
 <template>
   <div>
     <div
-      v-if="getSkills.length"
+      v-if="getSortedSkills.length"
       class="grid md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-y-10 gap-x-6"
     >
       <div
-        v-for="skill in getSkills"
+        v-for="skill in getSortedSkills"
         :key="skill.id"
         class="lg:justify-self-center"
       >
@@ -15,7 +15,7 @@
     <div v-if="getSkillsError">
       {{ getSkillsError }}
     </div>
-    <div v-else-if="!getSkills.length && !getSkillsError">
+    <div v-else-if="!getSortedSkills.length && !getSkillsError">
       List is empty for now :(
     </div>
   </div>
@@ -23,7 +23,7 @@
 
 <script setup lang='ts'>
 
-const { getSkills, getSkillsError } = useSkillsStore()
+const { getSortedSkills, getSkillsError } = useSkillsStore()
 
 </script>
 

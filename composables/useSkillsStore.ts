@@ -7,6 +7,7 @@ export default () => {
   const useSkillsError = useState<string | null>('skillsErrors', () => '')
 
   const getSkills = computed(():Skill[] => useSkills.value)
+  const getSortedSkills = computed(():Skill[] => [...getSkills.value].sort((a, b) => a.id - b.id))
   const getSkillsError = computed(():string | null => useSkillsError.value)
 
   const setSkillsToStore = (data: _AsyncData<Skill[], FetchError<any> | null>) => {
@@ -17,6 +18,7 @@ export default () => {
   return {
     getSkills,
     getSkillsError,
+    getSortedSkills,
     setSkillsToStore
   }
 }

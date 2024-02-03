@@ -1,7 +1,7 @@
 <template>
   <div class="grid lg:grid-cols-3 xl:grid-cols-4 gap-6" :class="$style.root">
     <div
-      v-for="(item, idx) in portfolioState.getPortfolioList.value"
+      v-for="(item, idx) in portfolioState.getSortedPortfolioList.value"
       :key="item.id"
       :class="[$style.item, {'xl:row-start-1 xl:row-end-3 xl:col-start-3 xl:col-end-5': idx === 2}]"
     >

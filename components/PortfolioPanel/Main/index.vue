@@ -54,7 +54,19 @@
         <div class="mb-6 text-3xl">
           Preview:
         </div>
+        <video
+          v-if="portfolioData.gif.includes('mp4')"
+          :id="portfolioData.id"
+          :src="`/works/${portfolioData.gif}`"
+          muted
+          autoplay
+          controls
+          loop>
+          <source :src="`/works/${portfolioData.gif}`" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
         <img
+          v-else
           :src="`/works/${portfolioData.gif}`"
           :alt="portfolioData.gif.split('.')[0]"
           class="shadow-xl shadow-secondary rounded-md m-auto"

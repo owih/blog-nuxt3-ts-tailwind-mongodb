@@ -1,15 +1,15 @@
 export default {
   about: {
     title: 'General',
-    text: ['I’m a 21-year-old frontend developer located in Russia Volgograd. I\'ve been doing frontend development for over a year and a half. Well-organized person with great attention to detail. Fan of TV series, basketball and gym activities. I like to solve interesting problems and learn very quickly. Ready for relocation'],
+    text: ['I\'m a 23-year-old frontend developer based in Russia, Volgograd, with 2.6 years of experience in frontend development. I am actively studying new technologies and writing projects that include backend development. I am a detail-oriented and well-organized person, passionate about creating seamless and visually appealing user interfaces. In addition to my technical skills, I bring a proactive approach to problem-solving and a strong ability to adapt and learn rapidly.'],
     image: '/about/avatar.JPG'
   },
   experience: {
     title: 'Experience',
-    text: ['Self studying: ~ 5 month', 'INTERVOLGA company: ~ 1 year 3 month', 'I developed pages (JS/Vue) from ready-made layouts in figma/PSD, added new features to projects, fix bugs (design/legacy code), participated in the discussion and so on...', 'Participated in more than 10 projects.', 'In this company I got a huge amount of experience in development and teamwork.']
+    text: ['Self studying: ~ 5 month', 'INTERVOLGA company: ~ 1 year 8 month', '101Hotels company: ~ 1 year (current)']
   },
   education: {
     title: 'Education',
-    text: ['University: Volgograd State Socio-Pedagogical University', 'Education year: 4th (last)', 'Speciality: Applied computer science (Прикладная информатика)']
+    text: ['University: Volgograd State Socio-Pedagogical University', 'Applied computer science', '2019 - 2023']
   }
 }

@@ -9,6 +9,7 @@ export default () => {
 
   const getPortfolioPerId = computed(():Portfolio | null => usePortfolio.value)
   const getPortfolioList = computed(():Portfolio[] => usePortfolioList.value)
+  const getSortedPortfolioList = computed(():Portfolio[] => [...usePortfolioList.value].sort((a, b) => a.id - b.id))
   const getPortfolioError = computed(():Portfolio[] => usePortfolioList.value)
 
   const setPortfolioListToStore = (data: _AsyncData<Portfolio[], FetchError<any> | null>) => {
@@ -25,6 +26,7 @@ export default () => {
     getPortfolioPerId,
     getPortfolioError,
     getPortfolioList,
+    getSortedPortfolioList,
     setPortfolioListToStore,
     setPortfolioPerIdToStore
   }
