@@ -16,7 +16,7 @@
         <AboutPanel :title="aboutData.education.title" :text="aboutData.education.text" />
       </section>
       <section>
-        <AboutPanel :title="aboutData.experience.title" :text="aboutData.experience.text" />
+        <AboutPanel :title="aboutData.experience.title" :text="aboutData.experience.text" :is-experience="true" />
       </section>
     </div>
   </div>

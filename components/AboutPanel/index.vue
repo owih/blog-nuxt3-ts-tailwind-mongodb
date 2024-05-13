@@ -5,9 +5,11 @@
         <h2>
           {{ props.title }}
         </h2>
-        <p v-for="(item, index) in props.text" :key="index" class="text-lg">
-          {{ item }}
-        </p>
+        <p
+          v-for="(item, index) in props.text"
+          :key="index" class="text-lg"
+          :class="{'whitespace-pre-line mb-4': props.isExperience, 'border-t-2 border-dashed pt-4': props.isExperience && index}"
+          v-html="item"/>
       </div>
       <div v-if="props.image" class="w-full h-80 max-w-xs lg:ml-20">
         <img :src="props.image" alt="avatar" class="w-full h-full rounded-full">
@@ -32,6 +34,11 @@ const props = defineProps({
     type: String as PropType<string|null>,
     required: false,
     default: null
+  },
+  isExperience: {
+    type: Boolean as PropType<boolean>,
+    required: false,
+    default: false,
   }
 })
 </script>
